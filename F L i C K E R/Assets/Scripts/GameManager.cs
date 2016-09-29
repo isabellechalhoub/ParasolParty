@@ -7,13 +7,6 @@ public class GameManager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		Application.LoadLevel(0);
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-	
 	}
 
 	// Event handling when Restart button clicked

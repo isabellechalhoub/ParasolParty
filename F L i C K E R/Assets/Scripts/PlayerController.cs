@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 	public BoxCollider2D enemy;
 
 	private bool shieldin = false;
+	private bool floatin = false;
 	private bool playerControl = true;
 	private int currHealth = 0;
 	private CharacterController2D _controller;
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
 		Vector3 velocity = _controller.velocity;
 		velocity.x = 0;
 
-		if (_controller.isGrounded && _controller.ground != null && _controller.ground.tag == "MovingPlatform") {
+		if (_controller.isGrounded && _controller.ground != null && _controller.ground.tag.Equals("MovingPlatform")) {
 			this.transform.parent = _controller.ground.transform;
 		}
 		else 
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
 				this.transform.parent = null;
 		}
 
+		#region running left/right
 		// Left arrow key
 		if (Input.GetAxis ("Horizontal") < 0 && !shieldin)
 		{
@@ -73,6 +75,7 @@ public class PlayerController : MonoBehaviour
 				//_animator.setFacing ("Left");
 			}
 		}
+
 		// Right arrow key
 		else if (Input.GetAxis ("Horizontal") > 0 && !shieldin) 
 		{
@@ -83,6 +86,8 @@ public class PlayerController : MonoBehaviour
 				//_animator.setFacing ("Right");
 			}
 		}
+		#endregion
+		#region idle
 		// Idle
 		//else 
 		//{
@@ -90,35 +95,29 @@ public class PlayerController : MonoBehaviour
 			//}
 				//_animator.setAnimation("Idle");
 		//}
+		#endregion
+		#region Jump/Float
 		// Space bar - Jump
-		if (Input.GetAxis ("Jump") > 0 && _controller.isGrounded && !shieldin) 
+		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded) 
 		{
 			velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
-			//_animator.setAnimation("Jump");
-		}
-
-		// Floating gravity
-		if (Input.GetAxis("Fire3") > 0 && !(_controller.isGrounded) && !shieldin)
+		} 
+		else if ((Input.GetKeyDown (KeyCode.Space) && !_controller.isGrounded) || floatin) 
 		{
-			gravity = -3;
+			velocity.y = -2;
+			floatin = true;
 		}
-		else
+		if (_controller.isGrounded)
 		{
+			floatin = false;
 			gravity = -35;
 		}
-
-
+		#endregion
 		//Shield up and down
 		if (Input.GetAxis("Fire1") > 0) {
 			shieldin = true;
 		} else
 			shieldin = false;
-
-		// Reset gravity after float
-		if (_controller.isGrounded)
-		{
-			gravity = -35;
-		}
 
 		// Snapping camera for big jump
 		/*if (GameObject.Find("Player").transform.position.x > 13)

@@ -4,7 +4,7 @@ using System.Collections;
 public class MovingPlatform : MonoBehaviour 
 {
 	public Vector3 endPosition = Vector3.zero;
-	public float speed = 1;
+	public float speed = 2;
 
 	private float timer = 0;
 	private Vector3 startPosition = Vector3.zero;

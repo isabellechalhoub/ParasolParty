@@ -114,6 +114,10 @@ public class PlayerController : MonoBehaviour
 		}
 		if (_controller.isGrounded || Input.GetKeyUp (KeyCode.Space))
 		{
+			if (!_controller.isGrounded)
+			{
+				_animator.setAnimation("Fall");
+			}
 			floatin = false;
 			gravity = -35;
 		}

@@ -94,9 +94,10 @@ public class PlayerController : MonoBehaviour
 		//Idle
 		else 
 		{
-			if (_controller.isGrounded && currHealth != 0) {
-			}
+			if (_controller.isGrounded && currHealth != 0) 
+			{
 				_animator.setAnimation("Idle");
+			}
 		}
 		#endregion
 
@@ -109,8 +110,13 @@ public class PlayerController : MonoBehaviour
 		} 
 		else if ((Input.GetKeyDown (KeyCode.Space) && !_controller.isGrounded) || floatin) 
 		{
+			//_animator.setAnimation("Float");
 			velocity.y = -2;
 			floatin = true;
+		}
+		if (Input.GetKey(KeyCode.Space) && !_controller.isGrounded)
+		{
+			//_animator.setAnimation("Float2");
 		}
 		if (_controller.isGrounded || Input.GetKeyUp (KeyCode.Space))
 		{

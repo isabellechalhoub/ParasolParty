@@ -1,9 +1,30 @@
 fileFormatVersion: 2
 guid: f7e41a086edaf4822b56b12e7e65a911
-timeCreated: 1475169274
+timeCreated: 1475171536
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: umbrella_float_spritesheet_0
+    21300002: umbrella_float_spritesheet_1
+    21300004: umbrella_float_spritesheet_2
+    21300006: umbrella_float_spritesheet_3
+    21300008: umbrella_float_spritesheet_4
+    21300010: umbrella_float_spritesheet_5
+    21300012: umbrella_float_spritesheet_6
+    21300014: umbrella_float_spritesheet_7
+    21300016: umbrella_float_spritesheet_8
+    21300018: umbrella_float_spritesheet_9
+    21300020: umbrella_float_spritesheet_10
+    21300022: umbrella_float_spritesheet_11
+    21300024: umbrella_float_spritesheet_12
+    21300026: umbrella_float_spritesheet_13
+    21300028: umbrella_float_spritesheet_14
+    21300030: umbrella_float_spritesheet_15
+    21300032: umbrella_float_spritesheet_16
+    21300034: umbrella_float_spritesheet_17
+    21300036: umbrella_float_spritesheet_18
+    21300038: umbrella_float_spritesheet_19
+    21300040: umbrella_float_spritesheet_20
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,25 +51,235 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  spritePixelsToUnits: 256
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: umbrella_float_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2038
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2038
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2038
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 2038
+        width: 499
+        height: 512
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1526
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1526
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1526
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1526
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1014
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1014
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1014
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1014
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 498
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 502
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 502
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 502
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2038
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 1529
+        width: 499
+        height: 512
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 1021
+        width: 499
+        height: 508
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 513
+        width: 499
+        height: 512
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: umbrella_float_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 505
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 

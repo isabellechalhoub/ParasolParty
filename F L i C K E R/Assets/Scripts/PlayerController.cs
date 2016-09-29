@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
 		Vector3 velocity = _controller.velocity;
 		velocity.x = 0;
 
+		#region moving platform parenting
 		if (_controller.isGrounded && _controller.ground != null && _controller.ground.tag.Equals("MovingPlatform")) {
 			this.transform.parent = _controller.ground.transform;
 		}
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
 			if (this.transform.parent != null)
 				this.transform.parent = null;
 		}
+		#endregion
 
 		#region running left/right
 		// Left arrow key
@@ -87,6 +89,7 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 		#endregion
+
 		#region idle
 		// Idle
 		//else 
@@ -96,6 +99,7 @@ public class PlayerController : MonoBehaviour
 				//_animator.setAnimation("Idle");
 		//}
 		#endregion
+
 		#region Jump/Float
 		// Space bar - Jump
 		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded) 
@@ -107,12 +111,14 @@ public class PlayerController : MonoBehaviour
 			velocity.y = -2;
 			floatin = true;
 		}
-		if (_controller.isGrounded)
+		if (_controller.isGrounded || Input.GetKeyUp (KeyCode.Space))
 		{
 			floatin = false;
 			gravity = -35;
 		}
 		#endregion
+
+		#region shield and enemy and stuff
 		//Shield up and down
 		if (Input.GetAxis("Fire1") > 0) {
 			shieldin = true;
@@ -135,6 +141,7 @@ public class PlayerController : MonoBehaviour
 		{
 			PlayerDamage (5);	
 		}
+		#endregion
 
 		// Change velocity.
 		velocity.y += gravity * Time.deltaTime;

@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
 	public float gravity = -35;
 	public float jumpHeight = 2;
 	public int health = 100;
-
 	public BoxCollider2D shield;
 	public BoxCollider2D enemy;
 
@@ -26,7 +25,6 @@ public class PlayerController : MonoBehaviour
 	//private AnimationController2D _animator;
 #endregion
 
-	// Use this for initialization
 	void Start ()
     {
 		shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<BoxCollider2D> ();
@@ -38,8 +36,7 @@ public class PlayerController : MonoBehaviour
 
 		currHealth = health;
 	}
-	
-	// Update is called once per frame
+
 	void Update ()
     {
 		if (playerControl) 
@@ -56,7 +53,8 @@ public class PlayerController : MonoBehaviour
 		velocity.x = 0;
 
 		#region moving platform parenting
-		if (_controller.isGrounded && _controller.ground != null && _controller.ground.tag.Equals("MovingPlatform")) {
+		if (_controller.isGrounded && _controller.ground != null && _controller.ground.tag.Equals("MovingPlatform")) 
+		{
 			this.transform.parent = _controller.ground.transform;
 		}
 		else 

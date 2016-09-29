@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 	private bool playerControl = true;
 	private int currHealth = 0;
 	private CharacterController2D _controller;
-	//private AnimationController2D _animator;
+	private AnimationController2D _animator;
 #endregion
 
 	void Start ()
@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 		shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<BoxCollider2D> ();
 		enemy = GameObject.FindGameObjectWithTag ("Enemy").GetComponent<BoxCollider2D> ();
 		_controller = gameObject.GetComponent<CharacterController2D>();
-		//_animator = gameObject.GetComponent<AnimationController2D>();
+		_animator = gameObject.GetComponent<AnimationController2D>();
 
 		gameCamera.GetComponent<CameraFollow2D> ().startCameraFollow (this.gameObject);
 		winPanel.SetActive(false);
@@ -73,8 +73,8 @@ public class PlayerController : MonoBehaviour
 			velocity.x = -walkSpeed;
 			if (_controller.isGrounded) 
 			{
-				//_animator.setAnimation ("Run");
-				//_animator.setFacing ("Left");
+				_animator.setAnimation ("Walk");
+				_animator.setFacing ("Left");
 			}
 		}
 
@@ -84,26 +84,27 @@ public class PlayerController : MonoBehaviour
 			velocity.x = walkSpeed;
 			if (_controller.isGrounded) 
 			{
-				//_animator.setAnimation ("Run");
-				//_animator.setFacing ("Right");
+				_animator.setAnimation ("Walk");
+				_animator.setFacing ("Right");
 			}
 		}
 		#endregion
 
 		#region idle
-		// Idle
-		//else 
-		//{
-			//if (_controller.isGrounded && currHealth != 0) {
-			//}
-				//_animator.setAnimation("Idle");
-		//}
+		//Idle
+		else 
+		{
+			if (_controller.isGrounded && currHealth != 0) {
+			}
+				_animator.setAnimation("Idle");
+		}
 		#endregion
 
 		#region Jump/Float
 		// Space bar - Jump
 		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded) 
 		{
+			_animator.setAnimation("Jump");
 			velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
 		} 
 		else if ((Input.GetKeyDown (KeyCode.Space) && !_controller.isGrounded) || floatin) 

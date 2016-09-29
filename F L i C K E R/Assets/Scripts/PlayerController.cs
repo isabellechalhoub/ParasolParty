@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 	public int health = 100;
 	public BoxCollider2D shield;
 	public BoxCollider2D enemy;
+	public GameObject healthNum;
 
 	private bool shieldin = false;
 	private bool floatin = false;
@@ -33,7 +34,8 @@ public class PlayerController : MonoBehaviour
 		//_animator = gameObject.GetComponent<AnimationController2D>();
 
 		gameCamera.GetComponent<CameraFollow2D> ().startCameraFollow (this.gameObject);
-
+		winPanel.SetActive(false);
+		gameOverPanel.SetActive(false);
 		currHealth = health;
 	}
 
@@ -166,7 +168,7 @@ public class PlayerController : MonoBehaviour
 			Winning ();
 		else if (col.tag == "Enemy" && Input.GetKey (KeyCode.X)) {}
 		else if(col.tag == "Enemy")
-			PlayerDamage (5);
+			PlayerDamage (2);
 	}
 		
 	private void Winning()
@@ -181,8 +183,7 @@ public class PlayerController : MonoBehaviour
 	{
 		currHealth -= damage;
 		float normHealth = (float)currHealth/(float)health;
-
-		Debug.Log ("You lost " + damage);
+		GameObject.Find ("Health").GetComponent<Text> ().text = currHealth.ToString();
 		//healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(normHealth*256, 32);
 
 		if (currHealth <= 0)
@@ -200,11 +201,11 @@ public class PlayerController : MonoBehaviour
 	// Stops the camera follow and reduces health
 	private void PlayerFallDeath()
 	{
-        Debug.Log("dead");
 		currHealth = 0;
+		GameObject.Find ("Health").GetComponent<Text> ().text = currHealth.ToString();
 		//healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(0, 32);
 		gameCamera.GetComponent<CameraFollow2D>().stopCameraFollow();
-		//gameOverPanel.SetActive(true);
+		gameOverPanel.SetActive(true);
 	}
 #endregion
 }

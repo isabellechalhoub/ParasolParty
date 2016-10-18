@@ -10,12 +10,15 @@ public class AIController : MonoBehaviour {
 	public float startingPos;
 	public float endingPos;
 	private float direction = -1f;
+    private int health = 3;
 	//private float originalPos;
     private float distance;
 	private Vector2 walking;
-//	public BoxCollider2D player;
-//	public BoxCollider2D enemy;
-//	public BoxCollider2D shield;
+	public BoxCollider2D player;
+	public BoxCollider2D shield;
+    public BoxCollider2D enemy;
+    public GameObject me;
+    public BoxCollider2D sword;
 
 	void Start () 
 	{
@@ -24,22 +27,32 @@ public class AIController : MonoBehaviour {
 		//originalPos = this.transform.position.x;
 		endingPos = transform.position.x - distance;
 		startingPos = transform.position.x;
-//		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
-//		enemy = GameObject.FindGameObjectWithTag ("Enemy").GetComponent<BoxCollider2D> ();
-//		shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<BoxCollider2D> ();
-	}
+        player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
+        shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<BoxCollider2D> ();
+        me = GameObject.FindGameObjectWithTag("Enemy");
+        enemy = me.GetComponent<BoxCollider2D>();
+        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
+    }
 
 	// Update is called once per frame
 	void Update () 
 	{
-//		if (enemy.IsTouching (player) || enemy.IsTouching (shield))
-//		{
-//			Debug.Log ("here");
-//			if (direction == -1f)
-//				direction = 1f;
-//			else
-//				direction = -1f;
-//		}
+        if (health == 0)
+        {
+            me.SetActive(false);
+        }
+        if (enemy.IsTouching(sword))
+        {
+            health--;
+            direction *= -1f;
+        }
+		if (enemy.IsTouching (player) || enemy.IsTouching (shield))
+		{
+			if (direction == -1f)
+				direction = 1f;
+			else
+				direction = -1f;
+		}
 		walking.x = direction * speed * Time.deltaTime;
 		if (direction > 0f && transform.position.x >= startingPos) {
 			direction = -1f;
@@ -48,13 +61,5 @@ public class AIController : MonoBehaviour {
 			direction = 1f;
 		}
 		transform.Translate (walking);
-	}
-
-	void OnCollisionEnter (Collision col)
-	{
-		Debug.Log ("here");
-		string tag = col.gameObject.tag;
-		if (tag == "Player" || tag == "Shield")
-			direction *= -1;
 	}
 }

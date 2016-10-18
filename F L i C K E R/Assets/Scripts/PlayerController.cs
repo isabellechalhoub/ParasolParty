@@ -14,21 +14,29 @@ public class PlayerController : MonoBehaviour
 	public float gravity = -35;
 	public float jumpHeight = 2;
 	public int health = 100;
-	public BoxCollider2D shield;
+	public BoxCollider2D coll;
 	public BoxCollider2D enemy;
 	public GameObject healthNum;
+    public GameObject shield;
+    public GameObject sword;
 
+    private Vector3 swordStartPos;
+    private Vector3 swordEndPos;
 	private bool shieldin = false;
 	private bool floatin = false;
 	private bool playerControl = true;
 	private int currHealth = 0;
 	private CharacterController2D _controller;
 	private AnimationController2D _animator;
-#endregion
+    private bool swinging =false;
+    private bool pause = false;
+    #endregion
 
-	void Start ()
+    void Start ()
     {
-		shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<BoxCollider2D> ();
+        shield = GameObject.FindGameObjectWithTag("Shield");
+        sword = GameObject.FindGameObjectWithTag("Sword");
+		coll = GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider2D> ();
 		enemy = GameObject.FindGameObjectWithTag ("Enemy").GetComponent<BoxCollider2D> ();
 		_controller = gameObject.GetComponent<CharacterController2D>();
 		_animator = gameObject.GetComponent<AnimationController2D>();
@@ -46,6 +54,15 @@ public class PlayerController : MonoBehaviour
 			Vector3 velocity = PlayerInput ();
 			_controller.move (velocity * Time.deltaTime);
 		}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pause = !pause;
+            if (pause)
+                Time.timeScale = 0;
+            else
+                Time.timeScale = 1;
+        }
 	}
 		
 #region Movement
@@ -68,7 +85,7 @@ public class PlayerController : MonoBehaviour
 
 		#region running left/right
 		// Left arrow key
-		if (Input.GetAxis ("Horizontal") < 0 && !shieldin)
+		if (Input.GetAxis ("Horizontal") < 0 && !shieldin && !swinging)
 		{
 			velocity.x = -walkSpeed;
 			if (_controller.isGrounded) 
@@ -79,7 +96,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		// Right arrow key
-		else if (Input.GetAxis ("Horizontal") > 0 && !shieldin) 
+		else if (Input.GetAxis ("Horizontal") > 0 && !shieldin && !swinging) 
 		{
 			velocity.x = walkSpeed;
 			if (_controller.isGrounded) 
@@ -103,7 +120,7 @@ public class PlayerController : MonoBehaviour
 
 		#region Jump/Float
 		// Space bar - Jump
-		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded) 
+		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded && !swinging) 
 		{
 			_animator.setAnimation("Jump");
 			velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
@@ -129,33 +146,45 @@ public class PlayerController : MonoBehaviour
 		}
 		#endregion
 
-		#region shield and enemy and stuff
+		#region shield
 		//Shield up and down
 		if (Input.GetAxis("Fire1") > 0) {
 			shieldin = true;
 		} else
 			shieldin = false;
 
-		// Snapping camera for big jump
-		/*if (GameObject.Find("Player").transform.position.x > 13)
-		{
-			Camera.main.fieldOfView = 100;
-			gameCamera.GetComponent<CameraFollow2D>().stopCameraFollow();
-			Vector3 newPos = new Vector3(21.32f, 1.33f, -8.0f);
-			Camera main = Camera.main;
-			main.transform.position = newPos;
-		}*/
+        if (Input.GetKey(KeyCode.X) && !swinging)
+        {
+            shieldin = true;
+            shield.SetActive(true);
+        }
+        else
+        {
+            shieldin = false;
+            shield.SetActive(false);
+        }
+        #endregion
 
-		//Check if touching enemy and shield up/down
-		if (shield.IsTouching(enemy) && Input.GetKey(KeyCode.X)) {}
-		else if(shield.IsTouching(enemy))
-		{
-			PlayerDamage (5);	
-		}
-		#endregion
+        #region sword swing
+        // swing dat sword bb
+        if (Input.GetKey(KeyCode.C) && !shieldin)
+        {
+            swinging = true;
+            sword.SetActive(true);
+            //Transform pos = sword.GetComponent<Transform>();
+            //swordStartPos = pos.localPosition;
+            //Vector3 axis = new Vector3(pos.localPosition.x, pos.localPosition.y - pos.localPosition.sqrMagnitude, 0);
+            //pos.RotateAround(axis, axis, 20 * Time.deltaTime);
+        }
+        else
+        {
+            swinging = false;
+            sword.SetActive(false);
+        }
+        #endregion
 
-		// Change velocity.
-		velocity.y += gravity * Time.deltaTime;
+        // Change velocity.
+        velocity.y += gravity * Time.deltaTime;
 		return velocity;
 	}
 
@@ -166,6 +195,7 @@ public class PlayerController : MonoBehaviour
 //	}
 
 #endregion
+
 #region Damage/Death/Winning
 	// When the player collides with the death collider
 	void OnTriggerEnter2D(Collider2D col)
@@ -177,7 +207,7 @@ public class PlayerController : MonoBehaviour
 			PlayerDamage (10);
 		else if (col.tag == "YouWin")
 			Winning ();
-		else if (col.tag == "Enemy" && Input.GetKey (KeyCode.X)) {}
+		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey(KeyCode.C))) {}
 		else if(col.tag == "Enemy")
 			PlayerDamage (2);
 	}

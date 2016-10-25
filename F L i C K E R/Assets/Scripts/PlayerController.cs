@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
 			Winning ();
 		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey(KeyCode.C))) {}
 		else if(col.tag == "Enemy")
-			PlayerDamage (2);
+			PlayerDamage (10);
 	}
 		
 	private void Winning()

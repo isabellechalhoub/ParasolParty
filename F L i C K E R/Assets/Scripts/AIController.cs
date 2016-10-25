@@ -4,14 +4,11 @@ using Prime31;
 
 public class AIController : MonoBehaviour {
 
-	//private CharacterController2D _controller;
-
 	public float speed = 1f;
 	public float startingPos;
 	public float endingPos;
 	private float direction = -1f;
     private int health = 3;
-	//private float originalPos;
     private float distance;
 	private Vector2 walking;
 	public BoxCollider2D player;
@@ -23,13 +20,11 @@ public class AIController : MonoBehaviour {
 	void Start () 
 	{
         distance = startingPos - endingPos;
-       // _controller = gameObject.GetComponent<CharacterController2D>();
-		//originalPos = this.transform.position.x;
 		endingPos = transform.position.x - distance;
 		startingPos = transform.position.x;
         player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
         shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<BoxCollider2D> ();
-        me = GameObject.FindGameObjectWithTag("Enemy");
+        me = gameObject;
         enemy = me.GetComponent<BoxCollider2D>();
         sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
     }

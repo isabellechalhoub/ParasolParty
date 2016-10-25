@@ -2,7 +2,7 @@
 using System.Collections;
 using Prime31;
 
-public class AIController : MonoBehaviour {
+public class PatrolEnemy : MonoBehaviour {
 
 	public float speed = 1f;
 	public float startingPos;

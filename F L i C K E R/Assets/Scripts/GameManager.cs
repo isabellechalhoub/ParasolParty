@@ -13,14 +13,14 @@ public class GameManager : MonoBehaviour
 	// Event handling when Restart button clicked
 	public void RestartLevel()
 	{
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         //Application.LoadLevel(Application.loadedLevel);
 	}
 
 	// Event handling when Exit button clicked - go to main menu
 	public void ExitLevel()
 	{
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("TitleScreen");
         //Application.LoadLevel(0);
 	}
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 	// Event handling for Play button on main menu - load level 1
 	public void Play()
 	{
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level 1");
         //Application.LoadLevel(1);
 	}
 }

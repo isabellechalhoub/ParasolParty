@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
 		//Idle
 		else 
 		{
-			if (_controller.isGrounded && currHealth != 0) 
+			if (_controller.isGrounded && currHealth != 0 && !shieldin && !swinging) 
 			{
 				_animator.setAnimation("Idle");
 			}
@@ -139,14 +139,7 @@ public class PlayerController : MonoBehaviour
 		} 
 		else if ((Input.GetKeyDown (KeyCode.Space) && !_controller.isGrounded) || floatin) 
 		{
-            //if (!floatin)
-            //{
-                _animator.setAnimation("Deploy");
-            ///}
-            //else
-            //{
-            //    _animator.setAnimation("Float");
-            //}
+            _animator.setAnimation("Deploy");
             velocity.y = -2;
 			floatin = true;
 		}
@@ -160,22 +153,33 @@ public class PlayerController : MonoBehaviour
 			{
 				_animator.setAnimation("Fall");
 			}
+            else
+            {
+                //_animator.setAnimation("Land");
+            }
 			floatin = false;
 			gravity = -35;
 		}
-		#endregion
+        #endregion
 
-		#region shield
-		//Shield up and down
-		if (Input.GetAxis("Fire1") > 0) {
-			shieldin = true;
-		} else
-			shieldin = false;
+        #region shield
+        //Shield up and down
+        //if (Input.GetAxis("Fire1") > 0) {
+        //	shieldin = true;
+        //} else
+        //	shieldin = false;
 
         if (Input.GetKey(KeyCode.X) && !swinging)
         {
+            _animator.setAnimation("Preblock");
             shieldin = true;
             shield.SetActive(true);
+        }
+        else if (Input.GetKeyUp(KeyCode.X) && shieldin)
+        {
+            _animator.setAnimation("Unblock");
+            shieldin = false;
+            shield.SetActive(false);
         }
         else
         {

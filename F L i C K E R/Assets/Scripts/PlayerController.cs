@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
 	public GameObject gameCamera;
 	public GameObject healthBar;
 	public GameObject gameOverPanel;
-	public GameObject winPanel;
+    public GameObject pausePanel;
+    public GameObject winPanel;
 	public float walkSpeed = 3;
 	public float gravity = -35;
 	public float jumpHeight = 2;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
 	private int currHealth = 0;
 	private CharacterController2D _controller;
 	private AnimationController2D _animator;
-    private bool swinging =false;
+    private bool swinging = false;
     private bool pause = false;
     #endregion
 
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
 		gameCamera.GetComponent<CameraFollow2D> ().startCameraFollow (this.gameObject);
 		winPanel.SetActive(false);
 		gameOverPanel.SetActive(false);
+        pausePanel.SetActive(false);
 		currHealth = health;
 	}
 
@@ -59,9 +61,18 @@ public class PlayerController : MonoBehaviour
         {
             pause = !pause;
             if (pause)
+            {
                 Time.timeScale = 0;
+                pausePanel.SetActive(true);
+                playerControl = false;
+                _animator.setAnimation("Idle");
+            }
             else
+            {
                 Time.timeScale = 1;
+                pausePanel.SetActive(false);
+                playerControl = true;
+            }
         }
 	}
 		

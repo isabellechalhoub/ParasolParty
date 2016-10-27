@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 		gameOverPanel.SetActive(false);
         pausePanel.SetActive(false);
 		currHealth = health;
+        _animator.setAnimation("Fall");
 	}
 
 	void Update ()
@@ -131,15 +132,22 @@ public class PlayerController : MonoBehaviour
 
 		#region Jump/Float
 		// Space bar - Jump
-		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded && !swinging) 
+		if (Input.GetKeyDown (KeyCode.Space) && !shieldin && _controller.isGrounded && !swinging && !floatin) 
 		{
 			_animator.setAnimation("Jump");
 			velocity.y = Mathf.Sqrt (2f * jumpHeight * -gravity);
 		} 
 		else if ((Input.GetKeyDown (KeyCode.Space) && !_controller.isGrounded) || floatin) 
 		{
-			//_animator.setAnimation("Float");
-			velocity.y = -2;
+            //if (!floatin)
+            //{
+                _animator.setAnimation("Deploy");
+            ///}
+            //else
+            //{
+            //    _animator.setAnimation("Float");
+            //}
+            velocity.y = -2;
 			floatin = true;
 		}
 		if (Input.GetKey(KeyCode.Space) && !_controller.isGrounded)

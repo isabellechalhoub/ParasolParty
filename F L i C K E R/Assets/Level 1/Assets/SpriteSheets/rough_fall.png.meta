@@ -1,9 +1,18 @@
 fileFormatVersion: 2
 guid: 9b9d853681683d54fabbeb267908021b
-timeCreated: 1477553558
+timeCreated: 1477558604
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: rough_fall_0
+    21300002: rough_fall_1
+    21300004: rough_fall_2
+    21300006: rough_fall_3
+    21300008: rough_fall_4
+    21300010: rough_fall_5
+    21300012: rough_fall_6
+    21300014: rough_fall_7
+    21300016: rough_fall_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,28 +39,145 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
-  alphaIsTransparency: 0
+  spritePixelsToUnits: 128
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: -1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: rough_fall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1042
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_1
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1042
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1042
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 542
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_4
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 542
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 542
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 42
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_7
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 42
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_fall_8
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 42
+        width: 500
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 

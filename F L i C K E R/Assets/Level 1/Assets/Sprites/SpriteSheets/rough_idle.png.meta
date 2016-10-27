@@ -1,0 +1,1109 @@
+fileFormatVersion: 2
+guid: 024dd796d4b3db644aaed50257ccf88a
+timeCreated: 1477548217
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 0
+    21300002: 1
+    21300004: 2
+    21300006: 3
+    21300008: 4
+    21300010: 5
+    21300012: 6
+    21300014: 7
+    21300016: 8
+    21300018: 9
+    21300020: 10
+    21300022: 11
+    21300024: 12
+    21300026: 13
+    21300028: 14
+    21300030: 15
+    21300032: 16
+    21300034: 17
+    21300036: 18
+    21300038: 19
+    21300040: 20
+    21300042: 21
+    21300044: 22
+    21300046: 23
+    21300048: 24
+    21300050: 25
+    21300052: 26
+    21300054: 27
+    21300056: 28
+    21300058: 29
+    21300060: 29.5
+    21300062: 30
+    21300064: 31
+    21300066: 32
+    21300068: 34
+    21300070: 35
+    21300072: 36
+    21300074: 37
+    21300076: 38
+    21300078: 39
+    21300080: 40
+    21300082: 41
+    21300084: 42
+    21300086: 43
+    21300088: 44
+    21300090: 45
+    21300092: 46
+    21300094: 47
+    21300096: 48
+    21300098: 49
+    21300100: 50
+    21300102: 51
+    21300104: 52
+    21300106: 53
+    21300108: 54
+    21300110: 55
+    21300112: 56
+    21300114: 57
+    21300116: 58
+    21300118: 59
+    21300120: 60
+    21300122: 61
+    21300124: 62
+    21300126: 63
+    21300128: 64
+    21300130: 65
+    21300132: 66
+    21300134: 67
+    21300136: 68
+    21300138: 69
+    21300140: rough_idle_0
+    21300142: rough_idle_1
+    21300144: rough_idle_2
+    21300146: rough_idle_3
+    21300148: rough_idle_4
+    21300150: rough_idle_5
+    21300152: rough_idle_6
+    21300154: rough_idle_7
+    21300156: rough_idle_8
+    21300158: rough_idle_9
+    21300160: rough_idle_10
+    21300162: rough_idle_11
+    21300164: rough_idle_12
+    21300166: rough_idle_13
+    21300168: rough_idle_14
+    21300170: rough_idle_15
+    21300172: rough_idle_16
+    21300174: rough_idle_17
+    21300176: rough_idle_18
+    21300178: rough_idle_19
+    21300180: rough_idle_20
+    21300182: rough_idle_21
+    21300184: rough_idle_22
+    21300186: rough_idle_23
+    21300188: rough_idle_24
+    21300190: rough_idle_25
+    21300192: rough_idle_26
+    21300194: rough_idle_27
+    21300196: rough_idle_28
+    21300198: rough_idle_29
+    21300200: rough_idle_30
+    21300202: rough_idle_31
+    21300204: rough_idle_32
+    21300206: rough_idle_33
+    21300208: rough_idle_34
+    21300210: rough_idle_35
+    21300212: rough_idle_36
+    21300214: rough_idle_37
+    21300216: rough_idle_38
+    21300218: rough_idle_39
+    21300220: rough_idle_40
+    21300222: rough_idle_41
+    21300224: rough_idle_42
+    21300226: rough_idle_43
+    21300228: rough_idle_44
+    21300230: rough_idle_45
+    21300232: rough_idle_46
+    21300234: rough_idle_47
+    21300236: rough_idle_48
+    21300238: rough_idle_49
+    21300240: rough_idle_50
+    21300242: rough_idle_51
+    21300244: rough_idle_52
+    21300246: rough_idle_53
+    21300248: rough_idle_54
+    21300250: rough_idle_55
+    21300252: rough_idle_56
+    21300254: rough_idle_57
+    21300256: rough_idle_58
+    21300258: rough_idle_59
+    21300260: rough_idle_60
+    21300262: rough_idle_61
+    21300264: rough_idle_62
+    21300266: rough_idle_63
+    21300268: rough_idle_64
+    21300270: rough_idle_65
+    21300272: rough_idle_66
+    21300274: rough_idle_67
+    21300276: rough_idle_68
+    21300278: rough_idle_69
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 128
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rough_idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_1
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_2
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_4
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_5
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_6
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_7
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 4041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_9
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_11
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_12
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_13
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_14
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_15
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 3540
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_18
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_19
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_20
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_21
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_22
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_23
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 3041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_25
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_26
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_27
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_28
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_29
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_30
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_31
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 2541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_33
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_34
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_35
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_36
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_37
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_38
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_39
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 2041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_41
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_42
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_43
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_44
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_45
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_46
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_47
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_49
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_50
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_51
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_52
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_53
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_54
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_55
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 1041
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_57
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_58
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_59
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_60
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_61
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_62
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_63
+      rect:
+        serializedVersion: 2
+        x: 3500
+        y: 541
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 41
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_65
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 41
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_66
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 41
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_67
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 41
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_68
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 41
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rough_idle_69
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 41
+        width: 500
+        height: 459
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

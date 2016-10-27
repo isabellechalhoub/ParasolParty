@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 	public GameObject gameCamera;
 	public GameObject healthBar;
 	public GameObject gameOverPanel;
-    public GameObject pausePanel;
 	public GameObject winPanel;
 	public float walkSpeed = 3;
 	public float gravity = -35;
@@ -45,7 +44,6 @@ public class PlayerController : MonoBehaviour
 		gameCamera.GetComponent<CameraFollow2D> ().startCameraFollow (this.gameObject);
 		winPanel.SetActive(false);
 		gameOverPanel.SetActive(false);
-        pausePanel.SetActive(false);
 		currHealth = health;
 	}
 
@@ -61,18 +59,9 @@ public class PlayerController : MonoBehaviour
         {
             pause = !pause;
             if (pause)
-            {
                 Time.timeScale = 0;
-                playerControl = false;
-                _animator.setAnimation("Idle");
-                pausePanel.SetActive(true);
-            }
             else
-            {
-                pausePanel.SetActive(false);
-                playerControl = true;
                 Time.timeScale = 1;
-            }
         }
 	}
 		
@@ -122,7 +111,7 @@ public class PlayerController : MonoBehaviour
 		//Idle
 		else 
 		{
-			if (_controller.isGrounded && currHealth != 0 && !shieldin && !swinging) 
+			if (_controller.isGrounded && currHealth != 0) 
 			{
 				_animator.setAnimation("Idle");
 			}
@@ -152,10 +141,6 @@ public class PlayerController : MonoBehaviour
 			{
 				_animator.setAnimation("Fall");
 			}
-            //else if (Input.GetKeyUp(KeyCode.Space) && _controller.isGrounded)
-            //{
-            //    _animator.setAnimation("Land");
-            //}
 			floatin = false;
 			gravity = -35;
 		}
@@ -163,31 +148,15 @@ public class PlayerController : MonoBehaviour
 
 		#region shield
 		//Shield up and down
-		//if (Input.GetAxis("Fire1") > 0)
-  //      {
-		//	shieldin = true;
-  //          _animator.setAnimation("Block");
-		//}
-  //      else
-  //      {
-  //          shieldin = false;
-  //      }
-
-        if (Input.GetKeyDown(KeyCode.X) && !shieldin)
-        {
-            _animator.setAnimation("Preblock");
-        }
-
-        if (Input.GetKeyUp(KeyCode.X))
-        {
-            _animator.setAnimation("Unblock");
-        }
+		if (Input.GetAxis("Fire1") > 0) {
+			shieldin = true;
+		} else
+			shieldin = false;
 
         if (Input.GetKey(KeyCode.X) && !swinging)
         {
             shieldin = true;
             shield.SetActive(true);
-            _animator.setAnimation("Block");
         }
         else
         {
@@ -202,7 +171,6 @@ public class PlayerController : MonoBehaviour
         {
             swinging = true;
             sword.SetActive(true);
-            _animator.setAnimation("Slash");
             //Transform pos = sword.GetComponent<Transform>();
             //swordStartPos = pos.localPosition;
             //Vector3 axis = new Vector3(pos.localPosition.x, pos.localPosition.y - pos.localPosition.sqrMagnitude, 0);
@@ -236,26 +204,25 @@ public class PlayerController : MonoBehaviour
 			PlayerFallDeath ();
 		else if (col.tag == "Damaging")
 			PlayerDamage (10);
-		else if (col.tag == "YouWin")
-            StartCoroutine(Winning());
-        else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey(KeyCode.C))) {}
+		else if (col.tag == "YouWin") 
+            Winning();
+		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey(KeyCode.C))) {}
 		else if(col.tag == "Enemy")
 			PlayerDamage (10);
 	}
 		
-	private IEnumerator Winning()
+	private void Winning()
 	{
 		playerControl = false;
 		_animator.setAnimation("Idle");
-        yield return new WaitForSeconds(0.25f);
-        winPanel.SetActive(true);
+		winPanel.SetActive(true);
 	}
 
 	// Changes player health when damage is taken. checks for death
 	private void PlayerDamage(int damage)
 	{
 		currHealth -= damage;
-		//float normHealth = (float)currHealth/(float)health;
+		float normHealth = (float)currHealth/(float)health;
 		GameObject.Find ("Health").GetComponent<Text> ().text = currHealth.ToString();
 		//healthBar.GetComponent<RectTransform>().sizeDelta = new Vector2(normHealth*256, 32);
 

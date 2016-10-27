@@ -10,22 +10,16 @@ public class WindController : MonoBehaviour
 	private Vector3 startPosition = Vector3.zero;
 	private bool outgoing = true;
 	private BoxCollider2D player;
-	private BoxCollider2D wind1;
-	private BoxCollider2D wind2;
-	private BoxCollider2D wind3;
-	private BoxCollider2D wind4;
-	private GameObject[] winds;
+	private GameObject wind;
+    private BoxCollider2D windColl;
+    private bool touching;
 
 	// Use this for initialization
 	void Start () 
 	{
 		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D>();
-		winds = GameObject.FindGameObjectsWithTag ("Wind");
-		Debug.Log (winds.Length);
-		wind1 = winds[0].GetComponent<BoxCollider2D>();
-		wind2 = winds[1].GetComponent<BoxCollider2D>();
-		wind3 = winds[2].GetComponent<BoxCollider2D>();
-		wind4 = winds[3].GetComponent<BoxCollider2D>();
+		wind = gameObject;
+        windColl = wind.GetComponent<BoxCollider2D>();
 
 		startPosition = this.gameObject.transform.position;
 		endPosition += startPosition;
@@ -35,6 +29,7 @@ public class WindController : MonoBehaviour
 		{
 			speed /= distance;
 		}
+        touching = false;
 	}
 	
 	// Update is called once per frame
@@ -42,11 +37,12 @@ public class WindController : MonoBehaviour
 	{
 		timer += Time.deltaTime * speed;
 		bool go = false;
-		bool touching = false;
-		if (wind1.IsTouching (player) || wind2.IsTouching (player) || wind3.IsTouching (player) || wind4.IsTouching (player)) {
-			touching = true;
-		} else
-			touching = false;
+  //      if (windColl.IsTouching(player))
+  //      {
+  //          Debug.Log("touch");
+		//	touching = true;
+		//} else
+		//	touching = false;
 
 		if (outgoing && touching) 
 		{
@@ -70,7 +66,18 @@ public class WindController : MonoBehaviour
 		}
 	}
 
-	void OnDrawGizmos()
+    void OnCollisionEnter2D (Collision2D coll)
+    {
+        Debug.Log("here");
+        if (coll.gameObject.tag.Equals("Player"))
+        {
+            Debug.Log("collide");
+            touching = true;
+        }
+    }
+
+
+    void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawLine(this.transform.position, endPosition + this.transform.position);

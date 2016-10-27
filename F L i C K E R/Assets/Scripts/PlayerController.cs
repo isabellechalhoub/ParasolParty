@@ -192,6 +192,7 @@ public class PlayerController : MonoBehaviour
         // swing dat sword bb
         if (Input.GetKey(KeyCode.C) && !shieldin)
         {
+            _animator.setAnimation("Slash");
             swinging = true;
             sword.SetActive(true);
             //Transform pos = sword.GetComponent<Transform>();

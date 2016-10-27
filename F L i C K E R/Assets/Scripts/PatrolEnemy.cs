@@ -12,10 +12,10 @@ public class PatrolEnemy : MonoBehaviour {
     private float distance;
 	private Vector2 walking;
 	public BoxCollider2D player;
-	public BoxCollider2D shield;
+	public PolygonCollider2D shield;
     public BoxCollider2D enemy;
     public GameObject me;
-    public BoxCollider2D sword;
+    public PolygonCollider2D sword;
 
 	void Start () 
 	{
@@ -23,10 +23,10 @@ public class PatrolEnemy : MonoBehaviour {
 		endingPos = transform.position.x - distance;
 		startingPos = transform.position.x;
         player = GameObject.FindGameObjectWithTag ("Player").GetComponent<BoxCollider2D> ();
-        shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<BoxCollider2D> ();
+        shield = GameObject.FindGameObjectWithTag ("Shield").GetComponent<PolygonCollider2D> ();
         me = gameObject;
         enemy = me.GetComponent<BoxCollider2D>();
-        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<BoxCollider2D>();
+        sword = GameObject.FindGameObjectWithTag("Sword").GetComponent<PolygonCollider2D>();
     }
 
 	// Update is called once per frame

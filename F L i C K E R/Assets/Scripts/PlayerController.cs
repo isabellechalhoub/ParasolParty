@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 	private AnimationController2D _animator;
     private bool swinging = false;
     private bool pause = false;
+    private bool wind;
     #endregion
 
     void Start ()
@@ -84,9 +85,15 @@ public class PlayerController : MonoBehaviour
 		velocity.x = 0;
 
 		#region moving platform parenting
-		if (_controller.isGrounded && _controller.ground != null && _controller.ground.tag.Equals("MovingPlatform")) 
+		if (_controller.isGrounded && _controller.ground != null && (_controller.ground.tag.Equals("MovingPlatform") || _controller.ground.tag.Equals("Wind"))) 
 		{
 			this.transform.parent = _controller.ground.transform;
+            if (_controller.ground.tag.Equals("Wind"))
+            {
+                _animator.setAnimation("Deploy");
+                floatin = true;
+                wind = true;
+            }
 		}
 		else 
 		{
@@ -100,7 +107,7 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetAxis ("Horizontal") < 0 && !shieldin && !swinging)
 		{
 			velocity.x = -walkSpeed;
-			if (_controller.isGrounded) 
+			if (_controller.isGrounded && !floatin) 
 			{
 				_animator.setAnimation ("Walk");
 				_animator.setFacing ("Left");
@@ -111,7 +118,7 @@ public class PlayerController : MonoBehaviour
 		else if (Input.GetAxis ("Horizontal") > 0 && !shieldin && !swinging) 
 		{
 			velocity.x = walkSpeed;
-			if (_controller.isGrounded) 
+			if (_controller.isGrounded && !floatin) 
 			{
 				_animator.setAnimation ("Walk");
 				_animator.setFacing ("Right");
@@ -123,7 +130,7 @@ public class PlayerController : MonoBehaviour
 		//Idle
 		else 
 		{
-			if (_controller.isGrounded && currHealth != 0 && !shieldin && !swinging) 
+			if (_controller.isGrounded && currHealth != 0 && !shieldin && !swinging && !floatin) 
 			{
 				_animator.setAnimation("Idle");
 			}
@@ -143,23 +150,28 @@ public class PlayerController : MonoBehaviour
             velocity.y = -2;
 			floatin = true;
 		}
-		if (Input.GetKey(KeyCode.Space) && !_controller.isGrounded)
-		{
-			//_animator.setAnimation("Float2");
-		}
 		if (_controller.isGrounded || Input.GetKeyUp (KeyCode.Space))
 		{
 			if (!_controller.isGrounded)
 			{
 				_animator.setAnimation("Fall");
+                wind = false;
 			}
             else
             {
                 //_animator.setAnimation("Land");
             }
-			floatin = false;
-			gravity = -35;
+            if (!wind)
+            {
+                floatin = false;
+                gravity = -35;
+            }
 		}
+
+        if (!_controller.isGrounded)
+        {
+            wind = false;
+        }
         #endregion
 
         #region shield

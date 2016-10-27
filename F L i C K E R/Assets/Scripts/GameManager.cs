@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour 
 {
@@ -12,13 +13,15 @@ public class GameManager : MonoBehaviour
 	// Event handling when Restart button clicked
 	public void RestartLevel()
 	{
-		Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(1);
+        //Application.LoadLevel(Application.loadedLevel);
 	}
 
 	// Event handling when Exit button clicked - go to main menu
 	public void ExitLevel()
 	{
-		Application.LoadLevel(0);
+        SceneManager.LoadScene(0);
+        //Application.LoadLevel(0);
 	}
 
 	// Even handling for Exit game button on main menu
@@ -30,6 +33,7 @@ public class GameManager : MonoBehaviour
 	// Event handling for Play button on main menu - load level 1
 	public void Play()
 	{
-		Application.LoadLevel(1);
+        SceneManager.LoadScene(1);
+        //Application.LoadLevel(1);
 	}
 }

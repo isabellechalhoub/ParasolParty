@@ -200,13 +200,12 @@ public class PlayerController : MonoBehaviour
 	// When the player collides with the death collider
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		//Debug.Log ("trigger");
 		if (col.tag == "KillZ")
 			PlayerFallDeath ();
 		else if (col.tag == "Damaging")
 			PlayerDamage (10);
-		else if (col.tag == "YouWin")
-			Winning ();
+		else if (col.tag == "YouWin") 
+            Winning();
 		else if (col.tag == "Enemy" && (Input.GetKey (KeyCode.X) || Input.GetKey(KeyCode.C))) {}
 		else if(col.tag == "Enemy")
 			PlayerDamage (10);
@@ -215,7 +214,7 @@ public class PlayerController : MonoBehaviour
 	private void Winning()
 	{
 		playerControl = false;
-		//_animator.setAnimation("Idle");
+		_animator.setAnimation("Idle");
 		winPanel.SetActive(true);
 	}
 

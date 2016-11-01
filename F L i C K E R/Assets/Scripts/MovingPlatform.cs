@@ -39,12 +39,20 @@ public class MovingPlatform : MonoBehaviour
 		} 
 		else 
 		{
-			this.transform.position = Vector3.Lerp(endPosition, startPosition, timer);
-			if (timer > 1) 
-			{
-				outgoing = true;
-				timer = 0;
-			}
+            if (this.gameObject.tag.Equals("MovingPlatform"))
+            {
+                this.transform.position = Vector3.Lerp(endPosition, startPosition, timer);
+                if (timer > 1)
+                {
+                    outgoing = true;
+                    timer = 0;
+                }
+            }
+            else if (this.gameObject.tag.Equals("Wind"))
+            {
+                this.transform.position = new Vector2(startPosition.x, startPosition.y);
+                outgoing = true;
+            }
 		}
 		
 	}
